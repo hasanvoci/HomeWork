@@ -1,0 +1,20 @@
+<span class="border border-light">
+<div class="container-fluid m-5">
+  <div class="row">
+    <h1>*Two Way Binding!</h1>
+    <h4>Type Here: {{inputValue}}</h4>
+  </div>
+  <input
+  class="form-control"
+  type="text"
+  (input)="HasInput($event)"
+  [(ngModel)]="inputValue"
+  >
+  <button
+    [disabled]="isDisabled"
+    type = "button"
+    class="btn btn-primary"
+    (click)="ResetButton($event)"
+  >Reset</button>
+</div>
+</span>
